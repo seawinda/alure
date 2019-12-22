@@ -7,6 +7,9 @@
     font-weight: 500;
     color: $mustard;
     text-transform: uppercase;
+    @media screen and (max-width: $wide-width) {
+        font-size: 18px;
+    }
 }
 
 .departments__phone {
@@ -18,9 +21,13 @@
     line-height: 0.9;
     font-weight: 900;
     margin-top: 10px;
+    white-space: nowrap;
     &:hover {
         color: #fff;
         text-decoration: none;
+    }
+    @media screen and (max-width: $wide-width) {
+        font-size: 24px;
     }
 }
 
@@ -30,5 +37,8 @@
     text-decoration: none;
     &:hover {
         text-decoration: none;
+    }
+    @media screen and (max-width: $wide-width) {
+        font-size: 18px;
     }
 }

@@ -10,4 +10,7 @@
     justify-self: flex-end;
     margin-left: auto;
     max-width: 65vw;
+    @media screen and (max-width: $wide-width) {
+        max-width: 60vw;
+    }
 }
