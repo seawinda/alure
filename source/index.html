@@ -1,46 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-s
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-s
 cale=1">
-  <meta name="description" content="">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="x-rim-auto-match" content="none">
-  <title>Тестовая карточка</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>Alure</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-  <section class="card">
-    <div class="card__decor">
-      <div class="card__flags"><img alt="flags" src="./img/icons.svg"></div>
-      <button type="button" class="card__button"></button>
-    </div>
-    <div class="card__text">
-      <h3 class="card__title">Добавить заявку</h3>
-      <div class="card__comment">На поиск подрядчика, объявление или вакансию</div>
-    </div>
-  </section>
-  <script>
-    const ready = (callback) => {
-      if (document.readyState != "loading") callback();
-      else document.addEventListener("DOMContentLoaded", callback);
-    }
-    ready(() => {
-      const card = document.querySelector('.card');
-      const button = document.querySelector('.card__button');
+    <header class="header">
+        <div class="header__logo logo">
+            <a><img src="img/logo.svg" alt="Alure"></a>
+        </div>
+        <nav class="header__mainmenu mainmenu">
+            <a href="" class="mainmenu__link">главная</a>
+            <a href="" class="mainmenu__link">о нас</a>
+            <a href="" class="mainmenu__link">производство</a>
+            <a href="" class="mainmenu__link">преимущества</a>
+            <a href="" class="mainmenu__link">Каталог продукции</a>
+            <a href="" class="mainmenu__link">инструменты </a>
+            <a href="" class="mainmenu__link">Услуги по нанесению </a>
+            <a href="" class="mainmenu__link">Сотрудничество</a>
+            <a href="" class="mainmenu__link">Где купить </a>
+            <a href="" class="mainmenu__link">Полезная </a>
+            <a href="" class="mainmenu__link">информация </a>
+            <a href="" class="mainmenu__link">Контакты</a>
+        </nav>
+    </header>
 
-      card.addEventListener('click', e => {
-        button.classList.toggle('card__button--green');
-        card.classList.toggle('card--green');
+    <main class="main">
+        <section class="firstscreen">
+            <div class="firstscreen__content content">
+                <h1 class="content__title">ФАБРИКА декоративных красок и штукатурок</h1>
+                <div class="content__text">Компания ALURE предлагает своим клиентам только высококачественную продукцию, соответствующую необходимым требованиям и мировым стандартам.</div>
+            </div>
+        </section>
 
-      }, false);
-    });
+        <section class="catalog">
+            <h2>Каталог продукции</h2>
+            <div class="catalog__image">
+                <img class="catalog__image">
+            </div>
+            <div class="catalog__items">
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Декоративные покрытия с эффектом античных стен</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Декоративные покрытия с эффектом шелка</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Декоративные покрытия с эффектом песка и кристаллов</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Декоративные штукатурки</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Венецианская штукатурка</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Флоковые покрытия</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Декоративные покрытия для фасадов</div>
+                </a>
+                <a href="" class="catalog__item">
+                    <img class="catalog__item-image">
+                    <div class="catalog__item-descr">Эластичное декоративное покрытия</div>
+                </a>
+            </div>
+        </section>
 
-  </script>
+        <section class="production">
+            <div class="production__count count">
+                <div class="count__item">
+                    <div class="count__num">8</div>
+                    <div class="count__descr">
+                        видов декоративных покрытий
+                    </div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">300</div>
+                    <div class="count__descr">оттенков декоративной краски и штукатурки</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">30</div>
+                    <div class="count__descr">Региональных представителей фабрики ALURE</div>
+                </div>
+            </div>
+            <div class="production__content content">
+                <h2 class="content__title">
+                    Производство декоративной продукции
+                </h2>
+                <div class="content__text">Компания ALURE является Российским производителем высококачественной декоративной краски и декоративной штукатурки для отделки стен и интерьеров жилых и офисных помещений. Система управления качеством, предлагаемой своим клиентам продукции
+                    и услуг, сертифицирована в соответствии со стандартами ISO-9001 EST. А сами декоративные краски и штукатурки марки ALURE прошли сертификацию и тестирование на износостойкость ко влажному истиранию РОСТЕСТ-е, в котором получили наивысшие
+                    оценки. Профессинальные мастера-отделочники "Фабрики декоративной краски и штукатурки ALURE" постоянно совершенствуют навыки работы с отделочными материалами, придумывают и прорабатывают новые техники и технологии нанесения декоративной
+                    краски и штукатурки.</div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="advantages__count count">
+                <div class="count__item">
+                    <div class="count__num">1</div>
+                    <div class="count__descr">собственное производство
+                    </div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">2</div>
+                    <div class="count__descr">большой ассортимент цветовых эффектов</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">3</div>
+                    <div class="count__descr">доступные цены
+                    </div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">4</div>
+                    <div class="count__descr">доставка по всей россии</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">5</div>
+                    <div class="count__descr">более 30 региональных представителей по всей россии</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">6</div>
+                    <div class="count__descr">постоянное наличие продукции на складе</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">7</div>
+                    <div class="count__descr">услуги по нанесению</div>
+                </div>
+                <div class="count__item">
+                    <div class="count__num">8</div>
+                    <div class="count__descr">наличие собственного выставочного зала</div>
+                </div>
+            </div>
+            <div class="advantages__content content">
+                <h2 class="content__title">
+                    Преимущества
+                </h2>
+                <div class="content__text">Декоративные покрытия для стен, предлагаемые своим клиентам компанией ALURE, выгодно отличаются на фоне конкурентов своей ценой, качеством, износостойкостью и широким ассортиментом. Декоративные покрытия Российского и Итальянского производства
+                    от компания «Фабрика декоративных красок и штукатурок ALURE», CANDIS, T.I.L.A.S. способны удовлетворить пожелания каждого клиента благодаря широкому спектру предлагаемых имитаций, фактур и цветовых решений. Кроме производства и реализации
+                    декоративных покрытий, компания ALURE производит обучение клиентов и их персонала работе с этим видом отделочных материалов для стен. Еженедельные мастер-классы призваны показать Вам все преимущества декоративных покрытий и научить
+                    Вас работать с ними. Посетив наш мастер-класс, Вам вряд ли захочется возвращаться к обоям или простой покраске стен при отделке интерьеров Вашего дома.</div>
+            </div>
+        </section>
+
+        <section class="learning">
+            <div class="learning__videos videos">
+                <div class="videos__item"><img src="images/video.jpg" alt=""></div>
+                <div class="videos__item"><img src="images/video.jpg" alt=""></div>
+                <div class="videos__item"><img src="images/video.jpg" alt=""></div>
+                <div class="videos__item"><img src="images/video.jpg" alt=""></div>
+            </div>
+            <div class="learning__content content">
+                <h2 class="content__title">
+                    Преимущества
+                </h2>
+                <div class="content__text">Декоративные покрытия для стен, предлагаемые своим клиентам компанией ALURE, выгодно отличаются на фоне конкурентов своей ценой, качеством, износостойкостью и широким ассортиментом. Декоративные покрытия Российского и Итальянского производства
+                    от компания «Фабрика декоративных красок и штукатурок ALURE», CANDIS, T.I.L.A.S. способны удовлетворить пожелания каждого клиента благодаря широкому спектру предлагаемых имитаций, фактур и цветовых решений. Кроме производства и реализации
+                    декоративных покрытий, компания ALURE производит обучение клиентов и их персонала работе с этим видом отделочных материалов для стен. Еженедельные мастер-классы призваны показать Вам все преимущества декоративных покрытий и научить
+                    Вас работать с ними. Посетив наш мастер-класс, Вам вряд ли захочется возвращаться к обоям или простой покраске стен при отделке интерьеров Вашего дома.</div>
+            </div>
+        </section>
+
+        <section class="map">
+            <img src="images/map.png" alt="">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logo logo">
+            <a><img src="img/logo.svg" alt="Alure"></a>
+        </div>
+        <nav class="footer__mainmenu mainmenu">
+            <a href="" class="mainmenu__link">главная</a>
+            <a href="" class="mainmenu__link">о нас</a>
+            <a href="" class="mainmenu__link">производство</a>
+            <a href="" class="mainmenu__link">преимущества</a>
+            <a href="" class="mainmenu__link">Каталог продукции</a>
+            <a href="" class="mainmenu__link">инструменты </a>
+            <a href="" class="mainmenu__link">Услуги по нанесению </a>
+            <a href="" class="mainmenu__link">Сотрудничество</a>
+            <a href="" class="mainmenu__link">Где купить </a>
+            <a href="" class="mainmenu__link">Полезная </a>
+            <a href="" class="mainmenu__link">информация </a>
+            <a href="" class="mainmenu__link">Контакты</a>
+        </nav>
+        <div class="contacts">
+            <span class="contacts__name">Фабрика декоративных красок и штукатурок «Alure»</span>
+            <br>Тел.: <a href="tel:+74957762793" class="contacts__phone">+7 495 776-27-93</a> / <a href="tel:+79263423017" class="contacts__phone">+7 926 342-30-17</a> <a href="https://wa.me/79263423017" class="contacts__whatsapp">(WhatsApp)</a>
+            <br>Метро: м. Курская, м. Чкаловская <br> Адрес: 101000, г. Москва, ул. Большая Филевская, д.16
+            <br>Режим работы: Пн.-Вс. с 10:00 до 22:00 E-mail: av_banner@list.ru
+        </div>
+        <div class="departments">
+            <div class="departments__item">
+                <div class="departments__name">московский отдел
+                </div>
+                <a href="tel:+74954324842" class="departments__phone">8 495 432-48-42</a>
+                <a href="mailto:mos@alurekraska.ru" class="departments__email">mos@alurekraska.ru</a>
+            </div>
+            <div class="departments__item">
+                <div class="departments__name">региональный отдел</div>
+                <a href="tel:+78007072826" class="departments__phone">8 800 707-28-26</a>
+                <a href="mailto:region@alurekraska.ru" class="departments__email">region@alurekraska.ru</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script src="js/SmoothScroll.js "></script>
+    <script src="js/scripts.js "></script>
+
 </body>
 
 </html>
