@@ -77,12 +77,16 @@ a {
     flex-wrap: wrap;
     &_catalog {
         padding-right: 0;
-        margin-left: 340px;
         justify-content: space-between;
     }
-    @media screen and (min-width: $wide-width) {
+    @media screen and (min-width: 1921px) {
         max-width: 1645px;
         padding-right: 60px;
+        &_catalog {
+            margin-left: 340px;
+            padding-right: 0;
+            width: calc(100% - 340px);
+        }
     }
     @media screen and (max-width: $wide-width) {
         margin: 0 0 0 260px;
