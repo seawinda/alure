@@ -1,0 +1,35 @@
+.count {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.count__item {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    width: 33%;
+    max-width: 460px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    &_advantages {
+        width: 25%;
+    }
+}
+
+.count__num {
+    font-size: 156px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 20px;
+    &_advantages {
+        width: 100%;
+        max-width: 324px;
+        font-size: 133px;
+        border-bottom: 1px solid #fff;
+    }
+}

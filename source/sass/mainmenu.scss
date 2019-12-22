@@ -8,11 +8,21 @@
     color: #ffffff;
     text-decoration: none;
     display: block;
-    margin-bottom: 20px;
+    padding: 1vh 1.2vw;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
     &:hover {
         color: $mustard;
     }
     &.marked {
         color: $mustard;
     }
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.mainmenu_footer .mainmenu__link {
+    border: none;
+    padding: 0;
+    line-height: 26px;
 }

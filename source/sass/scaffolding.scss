@@ -37,9 +37,10 @@ a {
     &:hover,
     &:active,
     &:focus {
-        color: $base-color;
+        color: $mustard;
     }
     &.phone {
+        color: $base-color;
         text-decoration: none;
     }
 }
@@ -64,9 +65,27 @@ a {
 }
 
 .page-wrapper {
-    padding: 0 10px 0 300px;
+    margin: 0 0 0 300px;
+    padding-right: 20px;
+    justify-self: flex-end;
+    display: flex;
+    width: calc(100% - 300px);
+    flex-wrap: wrap;
     @media screen and (min-width: $wide-width) {
-        max-width: 1585px;
-        margin: 0 60px 0 300px;
+        max-width: 1645px;
+        padding-right: 60px;
     }
+    &_catalog {        
+        padding-right: 0;
+        justify-content: space-between;
+    }
+}
+
+.main__section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
 }

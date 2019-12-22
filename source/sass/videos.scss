@@ -1,0 +1,17 @@
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    // max-width: 1290px;
+    justify-content: space-between;
+}
+
+.videos__item {
+    width: 49%;
+    max-width: 627px;
+    max-height: 100%;
+    margin-bottom: 4vh;
+    img {
+        display: block;
+        width: auto;
+    }
+}

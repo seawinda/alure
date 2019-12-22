@@ -1,15 +1,20 @@
 .header {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: auto;
     left: 0;
     height: 100vh;
-    width: 256px;
+    max-width: 256px;
     background-color: rgba(2, 2, 2, 0.8);
     display: flex;
     flex-direction: column;
-    padding: 26px 27px;
+    padding-top: 1px;
+    &.fixed-menu_active {
+        position: fixed;
+        top: 0;
+    }
 }
 
 .header__logo {
-    margin-bottom: 30px;
+    margin: 3vh 1.3vw;
+    text-align: center;
 }

@@ -1,0 +1,34 @@
+.content {
+    align-self: flex-end;
+    margin-bottom: 78px;
+    border-left: 2px solid #fff;
+    padding-left: 23px;
+    &_firstscreen {
+        max-width: 800px;
+    }
+}
+
+.content__title {
+    font-family: "Muller Black";
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 47.25px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: -3px;
+}
+
+.content__text {
+    margin-bottom: -4px;
+    p {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1vh;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
