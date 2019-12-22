@@ -1,6 +1,6 @@
 .content {
     align-self: flex-end;
-    margin-bottom: 78px;
+    margin-bottom: 80px;
     border-left: 2px solid #fff;
     padding-left: 23px;
     &_firstscreen {
@@ -12,11 +12,14 @@
     font-family: "Muller Black";
     font-size: 42px;
     font-weight: 900;
-    line-height: 47.25px;
+    line-height: 1.15;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: -3px;
+    @media screen and (max-width: $desktop-width) {
+        font-size: 38px;
+    }
 }
 
 .content__text {

@@ -15,9 +15,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     &_advantages {
-        width: 25%;
+        width: 24%;
+        @media screen and (max-width: $desktop-width) {
+            width: 23%;
+        }
+    }
+    @media screen and (max-width: $wide-width) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: $desktop-width) {
+        font-size: 18px;
     }
 }
 
@@ -26,10 +35,23 @@
     line-height: 1;
     font-weight: 600;
     margin-bottom: 20px;
+    @media screen and (max-width: $wide-width) {
+        font-size: 136px;
+    }
+    @media screen and (max-width: $desktop-width) {
+        font-size: 110px;
+    }
     &_advantages {
         width: 100%;
         max-width: 324px;
         font-size: 133px;
         border-bottom: 1px solid #fff;
+        font-family: "Muller Black", Arial, sans-serif;
+        @media screen and (max-width: $wide-width) {
+            font-size: 100px;
+        }
+        @media screen and (max-width: $desktop-width) {
+            font-size: 90px;
+        }
     }
 }

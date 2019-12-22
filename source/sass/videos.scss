@@ -9,9 +9,13 @@
     width: 49%;
     max-width: 627px;
     max-height: 100%;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     img {
         display: block;
         width: auto;
+    }
+    @media screen and (max-width: $wide-width) {
+        width: 48%;
+        margin-bottom: 30px;
     }
 }
