@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-s
+cale=1">
+  <meta name="description" content="">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <title>Тестовая карточка</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <section class="card">
+    <div class="card__decor">
+      <div class="card__flags"><img alt="flags" src="./img/icons.svg"></div>
+      <button type="button" class="card__button"></button>
+    </div>
+    <div class="card__text">
+      <h3 class="card__title">Добавить заявку</h3>
+      <div class="card__comment">На поиск подрядчика, объявление или вакансию</div>
+    </div>
+  </section>
+  <script>
+    const ready = (callback) => {
+      if (document.readyState != "loading") callback();
+      else document.addEventListener("DOMContentLoaded", callback);
+    }
+    ready(() => {
+      const card = document.querySelector('.card');
+      const button = document.querySelector('.card__button');
+
+      card.addEventListener('click', e => {
+        button.classList.toggle('card__button--green');
+        card.classList.toggle('card--green');
+
+      }, false);
+    });
+
+  </script>
+</body>
+
+</html>

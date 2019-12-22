@@ -1,0 +1,259 @@
+.forms {
+    max-width: 580px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 !important;
+    margin: 0 !important;
+    @media (max-width: $mobile_width) {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    &.new {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        .forms_wrapper {
+            padding: 80px 154px;
+            @media (max-width: $mobile_width) {
+                padding: 30px 20px;
+            }
+        }
+        .forms_title {
+            display: block;
+        }
+    }
+    &_wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 90px 100px;
+        display: block;
+        @media (max-width: $mobile_width) {
+            padding: 30px 20px;
+        }
+    }
+    &_title {
+        color: #656565;
+        text-align: center;
+        @include fontStyle($fonts3, 20px, 26px, 500);
+        display: none;
+    }
+    .btn {
+        @include marginAuto();
+        display: table;
+        background-color: transparent;
+        border: 0;
+    }
+    .checkbox {
+        position: relative;
+        margin-bottom: 50px;
+        display: block;
+        padding-bottom: 4px;
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+        &:before {
+            @include before(auto, -20px, auto, 0);
+            width: calc(100% + 40px);
+            height: 1px;
+            background: #a0a0a0;
+            display: block;
+        }
+        a {
+            @include fontStyle($fonts3, 13px, 14px, 400);
+            color: #a0a0a0;
+            letter-spacing: 0.2px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        [type="checkbox"] {
+            display: none;
+            &+label {
+                display: block;
+                margin-left: 10px;
+                width: calc(100% - 10px);
+                @include fontStyle($fonts3, 13px, 14px, 400);
+                color: #a0a0a0;
+                letter-spacing: 0.2px;
+                &:before {
+                    @include before(-1px, -15px, auto, auto);
+                    width: 13px;
+                    height: 14px;
+                    background-size: contain;
+                    background: url(/images/chch.svg) no-repeat;
+                }
+            }
+            &:checked+label {
+                &:before {
+                    width: 13px;
+                    height: 14px;
+                    background: url(/images/ch.svg) no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    .fancybox-close-small {
+        top: 20px;
+        right: 20px;
+        width: 23px;
+        height: 22px;
+        background: url(/images/close.svg) no-repeat;
+        background-size: cover;
+        @media (max-width: 480px) {
+            top: 10px;
+            right: 10px;
+        }
+        &:after {
+            content: none;
+        }
+    }
+    .form-group {
+        position: relative;
+        border-bottom: 1px solid #a0a0a0;
+        padding: 0;
+        display: block;
+        margin-bottom: 30px;
+        [type="text"],
+        [type="tel"],
+        [type="email"] {
+            padding: 6px 0;
+            width: 100%;
+            border: 0;
+            display: block;
+            color: #656565;
+            @include fontStyle($fonts3, 16px, 16px, 400);
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+    }
+}
+
+.reviewsform {
+    width: 100%;
+    max-width: 930px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.21);
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    padding: 40px;
+    @media (max-width: $tablet_width) {
+        padding: 30px;
+        width: 96%;
+        max-width: 700
+    }
+    @media (max-width:$ipad_width) {
+        border-radius: 0;
+    }
+    .fancybox-close-small {
+        top: 20px;
+        right: 20px;
+        width: 23px;
+        height: 22px;
+        background: url(/images/close.svg) no-repeat;
+        background-size: cover;
+        @media (max-width: 480px) {
+            top: 10px;
+            right: 10px;
+        }
+        &:after {
+            content: none;
+        }
+    }
+    &_title {
+        @include fontStyle($fonts3, 28px, 40px, 700);
+        color: #363d32;
+        letter-spacing: 0.47px;
+        display: block;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &.textarea {
+            height: 260px;
+            textarea {
+                width: 100%;
+                height: 246px;
+                padding: 20px;
+                @include fontStyle($fonts3, 16px, 16px, 400);
+                color: #71776f;
+                border-radius: 10px;
+                border: 1px solid rgba(113, 119, 111, 0.4);
+                &:hover,
+                &:focus {
+                    outline: none;
+                    background-color: transparent;
+                }
+                &::placeholder {
+                    color: #71776f;
+                }
+            }
+        }
+        [type="text"],
+        [type="tel"],
+        [type="email"] {
+            padding: 6px 0;
+            width: 100%;
+            border: 0;
+            display: block;
+            color: #656565;
+            border-bottom: 1px solid rgba(113, 119, 111, 0.4);
+            @include fontStyle($fonts3, 16px, 16px, 400);
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+    }
+    .checkbox {
+        margin-bottom: 10px;
+        display: block;
+        a {
+            @include fontStyle($fonts3, 12px, 14px, 400);
+            color: #71776f;
+            letter-spacing: 0.2px;
+        }
+        [type="checkbox"] {
+            display: none;
+            &+label {
+                display: block;
+                margin-left: 40px;
+                width: calc(100% - 40px);
+                @include fontStyle($fonts3, 12px, 14px, 400);
+                color: #71776f;
+                letter-spacing: 0.2px;
+                &:before {
+                    @include before(0, 20px, auto, auto);
+                    width: 16px;
+                    height: 16px;
+                    background-size: contain;
+                    background: url(/images/chch.svg) no-repeat;
+                }
+            }
+            &:checked+label {
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                    background: url(/images/ch.svg) no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    .btn {
+        background: #fff;
+        border: 0;
+        margin: 0 auto;
+        display: table;
+    }
+}
