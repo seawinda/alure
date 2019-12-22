@@ -32,6 +32,10 @@
     margin-bottom: 60px;
     height: 1045px;
     box-shadow: 7px 12px 39px rgba(0, 0, 0, 0.75);
+    @media screen and (max-width: 1855px) {
+        height: 800px;
+        margin-right: 40px;
+    }
     @media screen and (max-width: $wide-width) {
         height: 650px;
         margin-right: 0;
@@ -60,11 +64,8 @@
     flex-wrap: wrap;
     flex: 1;
     justify-content: space-between;
-    padding-right: 20px;
+    padding-right: 0;
     max-width: 905px;
-    @media screen and (min-width: $wide-width) {
-        padding-right: 45px;
-    }
     @media screen and (max-width: $wide-width) {
         justify-content: flex-end;
         padding-bottom: 35px;
@@ -80,6 +81,7 @@
     display: flex;
     margin-bottom: 60px;
     box-shadow: 3px 5px 32px rgba(0, 0, 0, 0.75);
+    margin-right: 20px;
     &:after {
         content: '';
         position: absolute;
