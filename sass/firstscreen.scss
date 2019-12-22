@@ -1,0 +1,6 @@
+.firstscreen {
+    background-image: url(../imgs/firstscreen_bg.jpg);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url(../imgs/firstscreen_bg@2x.jpg);
+    }
+}

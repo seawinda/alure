@@ -1,0 +1,13 @@
+.advantages {
+    background-image: url(../imgs/advantages_bg.jpg);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url(../imgs/advantages_bg@2x.jpg);
+    }
+}
+
+.advantages__count {
+    justify-self: center;
+    margin: 5vh 0;
+    position: relative;
+    width: 100%;
+}

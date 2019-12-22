@@ -1,0 +1,16 @@
+.production {
+    background-image: url(../imgs/production_bg.jpg);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url(../imgs/production_bg@2x.jpg);
+    }
+}
+
+.production__count {
+    justify-self: center;
+    margin: auto 0;
+    top: 25%;
+    position: relative;
+    transform: translateY(-50%);
+    width: 100%;
+    padding-bottom: 20px;
+}

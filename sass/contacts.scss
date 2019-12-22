@@ -1,0 +1,23 @@
+.contacts__name {
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $mustard;
+}
+
+.contacts__phone {
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.contacts__whatsapp {
+    text-decoration: none;
+    color: #84ff00;
+    &:hover {
+        color: #84ff00;
+        text-decoration: none;
+    }
+}

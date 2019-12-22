@@ -1,0 +1,88 @@
+.footer {
+    padding: 45px 20px;
+    @media screen and (min-width: $wide-width) {
+        padding: 45px 60px;
+    }
+}
+
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    width: 214px;
+}
+
+.footer__mainmenu {
+    align-self: flex-start;
+    padding-left: 13px;
+    position: relative;
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 2px;
+        height: calc(100% - 12px);
+        margin: 5px 0;
+        background-color: $mustard;
+    }
+}
+
+.footer__contacts {
+    align-self: flex-start;
+    padding-left: 13px;
+    position: relative;
+    font-size: 13px;
+    font-weight: 400;
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 2px;
+        height: calc(100% - 8px);
+        margin: 6px 0 0;
+        background-color: $mustard;
+    }
+}
+
+.footer__catalog {
+    position: relative;
+    align-self: flex-start;
+    padding-left: 13px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    a {
+        display: block;
+        text-decoration: none;
+    }
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 2px;
+        height: calc(100% - 8px);
+        margin: 6px 0 0;
+        background-color: $mustard;
+    }
+}
+
+.footer__departments {
+    text-align: right;
+}
+
+.footer__copyright {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 31px;
+    font-weight: 400;
+    vertical-align: bottom;
+    img {
+        margin-right: 19px;
+        width: 31px;
+    }
+}
