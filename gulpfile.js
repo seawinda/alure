@@ -13,7 +13,7 @@ var csso = require("gulp-csso");
 
 gulp.task("style", function() {
     gulp
-        .src("source/sass/main.scss")
+        .src("source/sass/style.scss")
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))

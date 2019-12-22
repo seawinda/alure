@@ -1,0 +1,34 @@
+@import "./veriables";
+
+.first-screen {
+  background-image: url(../imgs/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 1px;
+
+  @media screen and (min-width: $vtablet-width) {
+    min-height: 624px;
+  }
+}
+
+.first-screen .page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-screen__title {
+  margin-top: 100px;
+  margin-bottom: 45px;
+  text-align: center;
+
+  @media screen and (min-width: $vtablet-width) {
+    margin-top: 260px;
+  }
+}
+
+.first-screen__search {
+  display: flex;
+  flex-wrap: wrap;
+}

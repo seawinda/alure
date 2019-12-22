@@ -1,0 +1,19 @@
+.mainmenu {
+  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.mainmenu__link {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+}
