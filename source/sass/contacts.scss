@@ -3,6 +3,9 @@
     line-height: 26px;
     text-transform: uppercase;
     color: $mustard;
+    @media screen and (max-width: $wide-width) {
+        line-height: 20px;
+    }
 }
 
 .contacts__phone {

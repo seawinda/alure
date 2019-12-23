@@ -16,17 +16,18 @@
     align-items: center;
     text-align: center;
     margin-bottom: 35px;
-    &_advantages {
-        width: 24%;
-        @media screen and (max-width: $desktop-width) {
-            width: 23%;
-        }
-    }
     @media screen and (max-width: $wide-width) {
         font-size: 20px;
     }
     @media screen and (max-width: $desktop-width) {
         font-size: 18px;
+    }
+    &_advantages {
+        width: 24%;
+        @media screen and (max-width: $desktop-width) {
+            width: 23%;
+            font-size: 15px;
+        }
     }
 }
 
@@ -39,7 +40,7 @@
         font-size: 136px;
     }
     @media screen and (max-width: $desktop-width) {
-        font-size: 110px;
+        font-size: 100px;
     }
     &_advantages {
         width: 100%;
@@ -51,7 +52,10 @@
             font-size: 100px;
         }
         @media screen and (max-width: $desktop-width) {
+            margin-bottom: 10px;
+            max-width: 193px;
             font-size: 90px;
+            line-height: 0.8;
         }
     }
 }

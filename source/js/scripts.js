@@ -27,31 +27,10 @@ $(document).ready(function() {
         $('.header__mainmenu [data-href="' + listelem + '"]').addClass('marked');
     });
 
-    /* animate nums*/
-    const types = $('#types');
-    const colors = $('#colors');
-    const agents = $('#agents');
-    types.animateNumber({
-            number: 8,
-            easing: 'easeOutCubic'
-        },
-        5000
-    );
-    colors.animateNumber({
-            number: 300,
-            easing: 'easeOutCubic'
-        },
-        5000
-    );
-    agents.animateNumber({
-            number: 30,
-            easing: 'easeOutCubic'
-        },
-        5000
-    );
 
 });
 
+let counted = 0;
 $(document).scroll(function() {
     let scrolled = $(document).scrollTop();
     if (scrolled > $('.main').height() - $(window).height()) {
@@ -62,5 +41,35 @@ $(document).scroll(function() {
         $('.header').addClass('fixed-menu_active');
         $('.header').css('bottom', 'auto');
     }
+
+    /* animate nums*/
+
+
+    if ((scrolled >= $('#production').offset().top - 300) && (counted === 0)) {
+        const types = $('#types');
+        const colors = $('#colors');
+        const agents = $('#agents');
+        types.animateNumber({
+                number: 8,
+                easing: 'easeOutCubic'
+            },
+            5000
+        );
+        colors.animateNumber({
+                number: 300,
+                easing: 'easeOutCubic'
+            },
+            5000
+        );
+        agents.animateNumber({
+                number: 30,
+                easing: 'easeOutCubic'
+            },
+            5000
+        );
+        counted++;
+
+    }
+
 
 });

@@ -2,20 +2,23 @@
     display: flex;
     flex-wrap: wrap;
     // max-width: 1290px;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .videos__item {
-    width: 49%;
+    width: 48%;
     max-width: 627px;
     max-height: 100%;
-    margin-bottom: 1vh;
+    margin-left: 2%;
+    margin-bottom: 30px;
     img {
         display: block;
         width: auto;
     }
     @media screen and (max-width: $wide-width) {
         width: 48%;
-        margin-bottom: 30px;
+    }
+    @media screen and (max-width: $desktop-width) {
+        margin-bottom: 10px;
     }
 }
