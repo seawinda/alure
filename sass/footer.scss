@@ -3,6 +3,9 @@
     @media screen and (min-width: $wide-width) {
         padding: 35px 60px;
     }
+    @media screen and (max-width: $desktop-width) {
+        padding: 30px 25px;
+    }
 }
 
 .footer__main {
@@ -13,6 +16,10 @@
 .footer__logo {
     width: 214px;
     margin-right: 20px;
+    @media screen and (max-width: $desktop-width) {
+        width: 166px;
+        margin-right: 30px;
+    }
 }
 
 .footer__mainmenu {
@@ -29,9 +36,6 @@
         height: calc(100% - 12px);
         margin: 5px 0;
         background-color: $mustard;
-    }
-    @media screen and (max-width: $desktop-width) {
-        display: none;
     }
 }
 
@@ -53,7 +57,8 @@
         background-color: $mustard;
     }
     @media screen and (max-width: $wide-width) {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 
@@ -68,6 +73,9 @@
     a {
         display: block;
         text-decoration: none;
+        @media screen and (max-width: $wide-width) {
+            margin-bottom: 6px;
+        }
     }
     &:before {
         content: '';
@@ -80,7 +88,8 @@
         background-color: $mustard;
     }
     @media screen and (max-width: $wide-width) {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 
@@ -103,6 +112,9 @@
         font-size: 14px;
     }
     @media screen and (max-width: $desktop-width) {
-        font-size: 12px;
+        img {
+            margin-right: 10px;
+            width: 24px;
+        }
     }
 }

@@ -4,6 +4,9 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url(../imgs/catalog_bg@2x.jpg);
     }
+    @media screen and (max-width: $desktop-width) {
+        padding-top: 25px;
+    }
 }
 
 .catalog__title {
@@ -41,7 +44,7 @@
         margin-right: 0;
     }
     @media screen and (max-width: $desktop-width) {
-        height: 550px;
+        height: 603px;
     }
     img {
         display: block;
@@ -70,6 +73,9 @@
         justify-content: flex-end;
         padding-bottom: 35px;
         padding-right: 0;
+    }
+    @media screen and (max-width: $desktop-width) {
+        padding-bottom: 20px;
     }
 }
 
@@ -102,6 +108,9 @@
         margin-bottom: 20px;
         margin-right: 20px;
     }
+    @media screen and (max-width: $desktop-width) {
+        height: 151px;
+    }
 }
 
 .catalog__item-image {
@@ -117,7 +126,6 @@
     position: relative;
     align-self: flex-end;
     min-height: 65px;
-    height: 66px;
     width: 100%;
     background-color: #ffffff;
     color: #292929;
@@ -129,5 +137,10 @@
         padding: 13px 5px 13px 10px;
         font-size: 16px;
         line-height: 1.4;
+    }
+    @media screen and (max-width: $desktop-width) {
+        min-height: 47px;
+        padding: 5px 5px 5px 10px;
+        font-size: 14px;
     }
 }
