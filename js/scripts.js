@@ -34,9 +34,9 @@ $(document).ready(function() {
 let counted = 0;
 $(document).scroll(function() {
     let scrolled = $(document).scrollTop();
-    if (scrolled > $('.main').height() - $(window).height() * 2) {
+    if (scrolled > $('.main').height() - $(window).height()) {
         $('.header').removeClass('fixed-menu_active');
-        $('.header').css('bottom', $('.footer').outerHeight() + $('.map').outerHeight());
+        $('.header').css('bottom', $('.footer').outerHeight());
 
     } else {
         $('.header').addClass('fixed-menu_active');

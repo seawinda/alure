@@ -7,6 +7,9 @@
         @media screen and (max-width: $desktop-width) {
             padding-top: 30px;
         }
+        @media screen and (max-width: $gmobile-width) {
+            background-image: url(../imgs/learning_bg_mob.jpg);
+        }
     }
     
     .learning__videos {
