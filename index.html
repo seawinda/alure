@@ -12,26 +12,43 @@ cale=1">
     <title>Alure</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b2c5cb9a-55cf-44b6-bf4d-4af16647ddb5&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 
 <body>
-    <header class="header fixed-menu_active">
+    <header class="header mobile-menu fixed-menu_active">
         <div class="header__logo logo">
-            <a><img src="imgs/logo.png" srcset="imgs/logo@2x.png 2x" width="202" alt="Alure"></a>
+            <a>
+                <picture>
+                    <source media="(max-width: 1024px)" sizes="(max-width: 1024px) 124px" srcset="imgs/logo-mobile@2x.png">
+                    <img src="imgs/logo.png" srcset="imgs/logo@2x.png 2x" width="202" alt="Alure">
+                </picture>
+            </a>
+            <div class="logo__text"><img src="imgs/logo_text.png" srcset="imgs/logo_text@2x.png 2x" width="300" alt="ФАБРИКА 
+            декоративных красок
+            и штукатурок"></div>
         </div>
-        <nav class="header__mainmenu mainmenu">
-            <a href="" class="mainmenu__link go_to" data-href="#firstscreen">главная</a>
-            <a href="" class="mainmenu__link">о нас</a>
-            <a href="" class="mainmenu__link go_to" data-href="#production">производство</a>
-            <a href="" class="mainmenu__link go_to" data-href="#advantages">преимущества</a>
-            <a href="" class="mainmenu__link go_to" data-href="#catalog">Каталог продукции</a>
-            <a href="" class="mainmenu__link">инструменты </a>
-            <a href="" class="mainmenu__link">Услуги по нанесению </a>
-            <a href="" class="mainmenu__link">Сотрудничество</a>
-            <a href="" class="mainmenu__link">Где купить </a>
-            <a href="" class="mainmenu__link">Полезная информация </a>
-            <a href="" class="mainmenu__link go_to" data-href="#map">Контакты</a>
-        </nav>
+
+        <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+        <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+        <div class="mobile-menu__container">
+            <nav class="header__mainmenu mainmenu">
+                <a href="" class="mainmenu__link go_to" data-href="#firstscreen">главная</a>
+                <a href="" class="mainmenu__link">о нас</a>
+                <a href="" class="mainmenu__link go_to" data-href="#production">производство</a>
+                <a href="" class="mainmenu__link go_to" data-href="#advantages">преимущества</a>
+                <a href="" class="mainmenu__link go_to" data-href="#catalog">Каталог продукции</a>
+                <a href="" class="mainmenu__link">инструменты </a>
+                <a href="" class="mainmenu__link">Услуги по нанесению </a>
+                <a href="" class="mainmenu__link">Сотрудничество</a>
+                <a href="" class="mainmenu__link">Где купить </a>
+                <a href="" class="mainmenu__link">Полезная информация </a>
+                <a href="" class="mainmenu__link go_to" data-href="#map">Контакты</a>
+            </nav>
+        </div>
+
+
     </header>
 
     <main class="main">
@@ -106,7 +123,7 @@ cale=1">
                     </div>
                 </div>
 
-                <div class="production__content content">
+                <div class="production__content content content_mobile">
                     <h2 class="content__title">
                         Производство <br>декоративной продукции
                     </h2>
@@ -156,7 +173,7 @@ cale=1">
                         <div class="count__descr">наличие собственного выставочного зала</div>
                     </div>
                 </div>
-                <div class="advantages__content content">
+                <div class="advantages__content content content_mobile">
                     <h2 class="content__title">
                         Преимущества
                     </h2>
@@ -176,7 +193,7 @@ cale=1">
                     <div class="videos__item"><img src="images/video.jpg" alt=""></div>
                     <div class="videos__item"><img src="images/video.jpg" alt=""></div>
                 </div>
-                <div class="learning__content content">
+                <div class="learning__content content content_mobile">
                     <h2 class="content__title">
                         Обучение
                     </h2>
@@ -194,8 +211,67 @@ cale=1">
         </section>
 
         <section class="map" id="map">
-            <img src="images/map.png" alt="">
+            <!-- <img src="images/map.png" alt=""> -->
         </section>
+        <script type="text/javascript">
+            // Функция ymaps.ready() будет вызвана, когда
+            // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+            ymaps.ready(function() {
+                var myMap = new ymaps.Map('map', {
+                        center: [55.751574, 37.573856],
+                        zoom: 10,
+                        controls: ['smallMapDefaultSet']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+
+
+                    myCoords = [
+                        [55.73, 37.75],
+                        [55.81, 37.75],
+                        [55.81, 37.30]
+                    ];
+
+
+
+
+                // Создаём макет содержимого.
+                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                );
+
+
+
+                for (var i = 0, l = myCoords.length; i < l; i++) {
+                    myPlacemark = new ymaps.Placemark(myCoords[i], {
+                        hintContent: 'Собственный значок метки с контентом',
+                    }, {
+                        // Опции.
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: 'imgs/logo.svg',
+                        // Размеры метки.
+                        iconImageSize: [60, 60],
+                        // Смещение левого верхнего угла иконки относительно
+                        // её "ножки" (точки привязки).
+                        iconImageOffset: [-5, -38],
+                        // Необходимо указать данный тип макета.
+
+                        // Макет содержимого.
+                        iconContentLayout: MyIconContentLayout
+                    });
+                    myMap.geoObjects.add(myPlacemark);
+                }
+
+
+                myMap.behaviors.disable('scrollZoom');
+                myMap.container.fitToViewport();
+
+
+
+
+            });
+        </script>
     </main>
 
     <footer class="footer">
@@ -249,7 +325,7 @@ cale=1">
                 </div>
             </div>
         </div>
-        <div class="footer__copyright"><img src="imgs/copy.png" srcset="imgs/copy@2x.png 2x" alt="">© 2004 - 2019 Официальный сайт компании "Хороший Ремонт". Все права защищены.</div>
+        <div class="footer__copyright"><img src="imgs/copy.png" srcset="imgs/copy@2x.png 2x" alt="">© 2019 Официальный сайт компании "ALURE". Все права защищены.</div>
     </footer>
 
     <script src="js/jquery-3.2.1.min.js "></script>

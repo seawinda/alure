@@ -1,23 +1,26 @@
-.learning {
-    padding-top: 50px;
-    background-image: url(../imgs/learning_bg.jpg);
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url(../imgs/learning_bg@2x.jpg);
+    .learning {
+        padding-top: 50px;
+        background-image: url(../imgs/learning_bg.jpg);
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url(../imgs/learning_bg@2x.jpg);
+        }
+        @media screen and (max-width: $desktop-width) {
+            padding-top: 30px;
+        }
     }
-    @media screen and (max-width: $desktop-width) {
-        padding-top: 30px;
+    
+    .learning__videos {
+        justify-self: flex-end;
+        margin-left: auto;
+        max-width: 65vw;
+        margin-bottom: 30px;
+        @media screen and (max-width: $wide-width) {
+            max-width: 60vw;
+        }
+        @media screen and (max-width: $desktop-width) {
+            max-width: 59vw;
+        }
+        @media screen and (max-width: $tablet-width) {
+            max-width: 100%;
+        }
     }
-}
-
-.learning__videos {
-    justify-self: flex-end;
-    margin-left: auto;
-    max-width: 65vw;
-    margin-bottom: 30px;
-    @media screen and (max-width: $wide-width) {
-        max-width: 60vw;
-    }
-    @media screen and (max-width: $desktop-width) {
-        max-width: 59vw;
-    }
-}
