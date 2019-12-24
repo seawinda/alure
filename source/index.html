@@ -65,39 +65,67 @@ cale=1">
             <div class="page-wrapper page-wrapper_catalog">
                 <h2 class="catalog__title">Каталог продукции</h2 class="catalog__title">
                 <div class="catalog__image">
-                    <img src="images/catalog-main.jpg" srcset="images/catalog-main@2x.jpg 2x" alt="">
+                    <picture>
+                        <source media="(max-width: 640px)" srcset="images/catalog-main_mob.jpg">
+                        <img src="images/catalog-main.jpg" srcset="images/catalog-main@2x.jpg 2x" alt="">
+                    </picture>
+
                 </div>
                 <div class="catalog__items">
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog1.jpg" srcset="images/catalog1@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog1_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog1.jpg" srcset="images/catalog1@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Декоративные покрытия с&nbsp;эффектом античных стен</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog2.jpg" srcset="images/catalog2@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog2_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog2.jpg" srcset="images/catalog2@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Декоративные покрытия с&nbsp;эффектом шелка</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog3.jpg" srcset="images/catalog3@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog3_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog3.jpg" srcset="images/catalog3@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Декоративные покрытия с&nbsp;эффектом песка и&nbsp;кристаллов</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog4.jpg" srcset="images/catalog4@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog4_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog4.jpg" srcset="images/catalog4@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Декоративные <br>штукатурки</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog5.jpg" srcset="images/catalog5@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog5_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog5.jpg" srcset="images/catalog5@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Венецианская <br>штукатурка</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog6.jpg" srcset="images/catalog6@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog6_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog6.jpg" srcset="images/catalog6@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Флоковые <br>покрытия</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog7.jpg" srcset="images/catalog7@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog7_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog7.jpg" srcset="images/catalog7@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Декоративные покрытия для&nbsp;фасадов</div>
                     </a>
                     <a href="" class="catalog__item">
-                        <img class="catalog__item-image" src="images/catalog8.jpg" srcset="images/catalog8@2x.jpg 2x" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/catalog8_mob.jpg">
+                            <img class="catalog__item-image" src="images/catalog8.jpg" srcset="images/catalog8@2x.jpg 2x" alt="">
+                        </picture>
                         <div class="catalog__item-descr">Эластичное декоративное покрытия</div>
                     </a>
                 </div>
@@ -212,66 +240,67 @@ cale=1">
 
         <section class="map" id="map">
             <!-- <img src="images/map.png" alt=""> -->
+            <script type="text/javascript">
+                // Функция ymaps.ready() будет вызвана, когда
+                // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+                ymaps.ready(function() {
+                    var myMap = new ymaps.Map('map', {
+                            center: [55.751574, 37.573856],
+                            zoom: 10,
+                            controls: ['smallMapDefaultSet']
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        }),
+
+
+                        myCoords = [
+                            [55.73, 37.75],
+                            [55.81, 37.75],
+                            [55.81, 37.30]
+                        ];
+
+
+
+
+                    // Создаём макет содержимого.
+                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                    );
+
+
+
+                    for (var i = 0, l = myCoords.length; i < l; i++) {
+                        myPlacemark = new ymaps.Placemark(myCoords[i], {
+                            hintContent: 'Собственный значок метки с контентом',
+                        }, {
+                            // Опции.
+                            iconLayout: 'default#image',
+                            // Своё изображение иконки метки.
+                            iconImageHref: 'imgs/logo.svg',
+                            // Размеры метки.
+                            iconImageSize: [60, 60],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-5, -38],
+                            // Необходимо указать данный тип макета.
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayout
+                        });
+                        myMap.geoObjects.add(myPlacemark);
+                    }
+
+
+                    myMap.behaviors.disable('scrollZoom');
+                    myMap.container.fitToViewport();
+
+
+
+
+                });
+            </script>
         </section>
-        <script type="text/javascript">
-            // Функция ymaps.ready() будет вызвана, когда
-            // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-            ymaps.ready(function() {
-                var myMap = new ymaps.Map('map', {
-                        center: [55.751574, 37.573856],
-                        zoom: 10,
-                        controls: ['smallMapDefaultSet']
-                    }, {
-                        searchControlProvider: 'yandex#search'
-                    }),
 
-
-                    myCoords = [
-                        [55.73, 37.75],
-                        [55.81, 37.75],
-                        [55.81, 37.30]
-                    ];
-
-
-
-
-                // Создаём макет содержимого.
-                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                );
-
-
-
-                for (var i = 0, l = myCoords.length; i < l; i++) {
-                    myPlacemark = new ymaps.Placemark(myCoords[i], {
-                        hintContent: 'Собственный значок метки с контентом',
-                    }, {
-                        // Опции.
-                        iconLayout: 'default#image',
-                        // Своё изображение иконки метки.
-                        iconImageHref: 'imgs/logo.svg',
-                        // Размеры метки.
-                        iconImageSize: [60, 60],
-                        // Смещение левого верхнего угла иконки относительно
-                        // её "ножки" (точки привязки).
-                        iconImageOffset: [-5, -38],
-                        // Необходимо указать данный тип макета.
-
-                        // Макет содержимого.
-                        iconContentLayout: MyIconContentLayout
-                    });
-                    myMap.geoObjects.add(myPlacemark);
-                }
-
-
-                myMap.behaviors.disable('scrollZoom');
-                myMap.container.fitToViewport();
-
-
-
-
-            });
-        </script>
     </main>
 
     <footer class="footer">

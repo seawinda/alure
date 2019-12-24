@@ -3,6 +3,9 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url(../imgs/production_bg@2x.jpg);
     }
+    @media screen and (max-width: $gmobile-width) {
+        background-image: url(../imgs/production_bg_mob.jpg);
+    }
 }
 
 .production__count {

@@ -32,7 +32,7 @@
             display: block;
         }
     }
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: $gmobile-width) {
         img {
             height: 30px;
             width: auto;
@@ -58,12 +58,12 @@
 
 .header__mainmenu {
     @media screen and (max-width: $tablet-width) {
-        height: calc(100vh - 130px);
+        height: calc(100vh - 110px);
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: $gmobile-width) {
         height: 100vh;
     }
 }

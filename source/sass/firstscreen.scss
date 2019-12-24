@@ -3,4 +3,7 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url(../imgs/firstscreen_bg@2x.jpg);
     }
+    @media screen and (max-width: $gmobile-width) {
+        background-image: url(../imgs/firstscreen_bg_mob.jpg);
+    }
 }
