@@ -6,6 +6,9 @@
     @media screen and (max-width: $desktop-width) {
         font-size: 14px;
     }
+    @media screen and (max-width: $mobile-width) {
+        font-size: 12px;
+    }
 }
 
 .mainmenu__link {
@@ -23,8 +26,11 @@
     @media screen and (max-width: 1920px) {
         padding: 15px 20px;
     }
-    @media screen and (max-width : $desktop-width) {
+    @media screen and (max-width: $desktop-width) {
         padding: 10px 20px;
+    }
+    @media screen and (max-width: $tablet-width) {
+        border-top: none;
     }
 }
 

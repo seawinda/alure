@@ -21,4 +21,7 @@
     @media screen and (max-width: $desktop-width) {
         margin-bottom: 10px;
     }
+    @media screen and (max-width: $mobile-width) {
+        width: 100%;
+    }
 }
